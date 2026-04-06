@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { FAB } from "@/components/fab";
 import { HeroSection } from "@/components/sections/hero";
 import { ServicesSection } from "@/components/sections/services";
 import { PricingSection } from "@/components/sections/pricing";
@@ -21,7 +20,6 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
-      <FAB />
     </>
   );
 }

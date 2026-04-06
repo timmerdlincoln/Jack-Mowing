@@ -11,8 +11,8 @@ export function AboutSection() {
         <div className="w-full md:w-1/2 relative">
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Wj1XGlvpuGH8zCUlzQ-ohBjKQe-ik2SH4ZZC8cJoRn2zGuODF0iYeJP1SwVVr2zW9MJv8D9mvNeXoXsTmszD8JzU1eV_BwWshRGBbHWpX9l-6dIaN40Oy4aQsdgeB7qWhciEF81EAMycLLEDTr2tW1B5meJwKc6PSiyxWMCTY_xIhJbLZU5W8C8b3pPCwR5z-w7A4zQ7k9z7E0PYOVAlSwAlezZtvwVms_hgW74ePWOCu03VkK0yT4drZhECo1HLIJ9yviHoiQw"
-              alt="Modern residential house with beautiful landscaping and a manicured green lawn"
+              src="/about.png"
+              alt="Grand stone estate with perfectly manicured lawn and formal garden at golden hour"
               className="w-full h-full object-cover"
             />
           </div>

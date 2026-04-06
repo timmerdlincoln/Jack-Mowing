@@ -16,9 +16,16 @@ const contactDetails = [
   },
   {
     icon: "location_on",
-    heading: "Studio Address",
-    detail: "88 Heritage Lane\nSomerset Heights, CA 94025",
+    heading: "Location",
+    detail: "Lincoln, Nebraska",
   },
+];
+
+const services = [
+  "Lawn Maintenance",
+  "Landscape Construction",
+  "Irrigation & Drainage",
+  "Landscape Design",
 ];
 
 export function ContactSection() {
@@ -117,6 +124,39 @@ export function ContactSection() {
                     required
                     className="w-full bg-ce-surface border-none focus:outline-none focus:ring-2 focus:ring-ce-primary/20 rounded-[0.75rem] py-4 px-6 text-ce-on-surface placeholder:text-ce-on-surface-variant/40"
                   />
+                </div>
+
+                <div className="space-y-2">
+                  <label
+                    className="block text-sm font-label uppercase tracking-widest text-ce-secondary"
+                    htmlFor="phone"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="(402) 555-0100"
+                    className="w-full bg-ce-surface border-none focus:outline-none focus:ring-2 focus:ring-ce-primary/20 rounded-[0.75rem] py-4 px-6 text-ce-on-surface placeholder:text-ce-on-surface-variant/40"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label
+                    className="block text-sm font-label uppercase tracking-widest text-ce-secondary"
+                    htmlFor="service"
+                  >
+                    Service Interested In
+                  </label>
+                  <select
+                    id="service"
+                    className="w-full bg-ce-surface border-none focus:outline-none focus:ring-2 focus:ring-ce-primary/20 rounded-[0.75rem] py-4 px-6 text-ce-on-surface appearance-none"
+                  >
+                    <option value="">Select a service...</option>
+                    {services.map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
