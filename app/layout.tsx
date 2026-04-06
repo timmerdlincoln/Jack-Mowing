@@ -19,7 +19,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "The Curated Estate — Refined Landscaping",
+  title: "Jack Mowing — Refined Landscaping",
   description:
     "Premium residential landscaping and lawn care. Botanical precision with an editorial eye.",
 };

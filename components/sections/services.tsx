@@ -3,7 +3,7 @@ const services = [
     tag: "Seasonal Stewardship",
     title: "Lawn Maintenance",
     description:
-      "Meticulous mowing, edging, and seasonal care routines that keep your grounds immaculate through every season.",
+      "Mowing, edging, and seasonal care routines that keep your grounds immaculate through every season.",
     icon: "yard",
     image: "/lawn-maintenance.png",
     imageAlt: "Perfectly striped lawn freshly cut in warm afternoon light",
@@ -32,7 +32,7 @@ const services = [
     tag: "Artistic Vision",
     title: "Landscape Design",
     description:
-      "Bespoke garden plans that marry botanical expertise with architectural vision, tailored to the unique character of your estate.",
+      "Bespoke garden plans that marry botanical expertise with architectural vision, tailored to the unique character of your home.",
     icon: "draw",
     image: "/landscape-design.png",
     imageAlt: "Elegant residential landscaping with curated garden beds and manicured lawn",
@@ -51,7 +51,7 @@ export function ServicesSection() {
             </h2>
             <p className="text-ce-on-surface-variant text-xl leading-relaxed">
               Our approach blends botanical precision with an editorial eye,
-              ensuring your estate is not just maintained, but a masterpiece of
+              ensuring your home is not just maintained, but a masterpiece of
               living art.
             </p>
           </div>

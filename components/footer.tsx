@@ -16,7 +16,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <h3 className="font-headline italic text-3xl mb-6 tracking-wide">
-              The Curated Estate
+              Jack Mowing
             </h3>
             <p className="text-white/60 max-w-sm text-sm leading-relaxed mb-8">
               Defining the standard of high-end residential landscaping through
@@ -71,7 +71,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 tracking-widest uppercase gap-4">
-          <span>© 2024 Verdant Estate. The Curated Estate.</span>
+          <span>© 2024 Verdant. Jack Mowing.</span>
           <div className="flex gap-8">
             {["Journal", "Heritage", "Studio"].map((item) => (
               <a

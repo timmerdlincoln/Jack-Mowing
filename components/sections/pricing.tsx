@@ -18,11 +18,11 @@ const tiers = [
   },
   {
     name: "The Concierge",
-    subtitle: "Full Estate Management",
+    subtitle: "Full Home Management",
     price: "$875",
     period: "/ MONTHLY",
     features: [
-      "Daily Estate Inspection",
+      "Daily Home Inspection",
       "Priority Storm Response",
       "Bespoke Shrub Sculpting",
       "Smart Hydration Control",
@@ -44,7 +44,7 @@ export function PricingSection() {
             Invest in Stewardship
           </span>
           <h2 className="font-headline text-5xl text-ce-primary">
-            The Estate Plans
+            Our Plans
           </h2>
         </div>
 

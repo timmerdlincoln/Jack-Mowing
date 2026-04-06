@@ -12,7 +12,7 @@ export function AboutSection() {
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
             <img
               src="/about.png"
-              alt="Grand stone estate with perfectly manicured lawn and formal garden at golden hour"
+              alt="Grand stone home with perfectly manicured lawn and formal garden at golden hour"
               className="w-full h-full object-cover"
             />
           </div>

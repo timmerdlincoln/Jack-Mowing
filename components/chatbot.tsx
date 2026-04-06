@@ -2,16 +2,16 @@
 
 import { useState, useRef, useEffect } from "react";
 
-const BUSINESS_NAME = "The Curated Estate";
+const BUSINESS_NAME = "Jack Mowing";
 
 const FAQ_DATA = [
-  { q: "What services do you offer?", a: "We offer lawn maintenance, landscape construction, irrigation & drainage systems, and bespoke landscape design — tailored to each estate we steward." },
+  { q: "What services do you offer?", a: "We offer lawn maintenance, landscape construction, irrigation & drainage systems, and bespoke landscape design — tailored to each home we steward." },
   { q: "What areas do you serve?", a: "We serve a 30-mile radius from our studio in Somerset Heights, CA. Book a free site visit and we'll confirm your coverage area." },
   { q: "How much does lawn care cost?", a: "Our Seasonal plan starts at $450/month and our full Concierge plan is $875/month. Custom pricing is available for estates over 5 acres." },
   { q: "Do I need to be home?", a: "Not at all. As long as we have gate access and clear instructions, our team handles everything. We'll send a photo after every visit." },
   { q: "What if it rains?", a: "We monitor conditions closely. If it's too wet to work, we'll reschedule to the next available day and notify you by text." },
   { q: "Do you bring your own equipment?", a: "Yes — we arrive with commercial-grade equipment. You don't need to provide a thing." },
-  { q: "How do I pay?", a: "We accept credit/debit cards, Venmo, Zelle, and checks. Monthly invoicing is available for all recurring estate plans." },
+  { q: "How do I pay?", a: "We accept credit/debit cards, Venmo, Zelle, and checks. Monthly invoicing is available for all recurring home plans." },
   { q: "Do you offer contracts?", a: "We offer per-visit and full seasonal contracts. Seasonal plans include a 10% loyalty discount." },
 ];
 
@@ -158,7 +158,7 @@ export function Chatbot() {
       addUser("Confirmed!");
       setBookingStep(null);
       setBookingData({});
-      addBot("You're all set. Our estate team will be in touch to confirm your visit. We look forward to meeting you.", null, 500);
+      addBot("You're all set. Our home team will be in touch to confirm your visit. We look forward to meeting you.", null, 500);
       setTimeout(() => showMainMenu(), 1800);
     } else if (value === "confirm_no") {
       addUser("Let me start over");

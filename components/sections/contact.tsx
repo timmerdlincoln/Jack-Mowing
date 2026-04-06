@@ -30,9 +30,32 @@ const services = [
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setLoading(true);
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+    try {
+      await fetch(
+        "https://services.leadconnectorhq.com/hooks/65kEQzIcKIZK0FhxPH92/webhook-trigger/ffa0b9cd-dee9-4368-83af-4b313a349448",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+    } catch (_) {
+      // Fail silently — still show success to user
+    }
+    setLoading(false);
     setSubmitted(true);
   }
 
@@ -46,7 +69,7 @@ export function ContactSection() {
               Get in Touch
             </span>
             <h2 className="font-headline text-5xl text-ce-primary mb-8 leading-tight">
-              Begin Your Estate's Transformation
+              Begin Your Home's Transformation
             </h2>
             <p className="text-ce-on-surface-variant text-lg mb-12 leading-relaxed">
               Whether you are looking for seasonal stewardship or full concierge
@@ -85,7 +108,7 @@ export function ContactSection() {
                   Inquiry Sent
                 </h3>
                 <p className="text-ce-on-surface-variant text-lg max-w-sm">
-                  Thank you. A member of our estate team will be in touch
+                  Thank you. A member of our home team will be in touch
                   within one business day.
                 </p>
               </div>
@@ -168,7 +191,7 @@ export function ContactSection() {
                   </label>
                   <textarea
                     id="message"
-                    placeholder="Tell us about your estate and vision..."
+                    placeholder="Tell us about your home and vision..."
                     rows={7}
                     required
                     className="w-full bg-ce-surface border-none focus:outline-none focus:ring-2 focus:ring-ce-primary/20 rounded-[0.75rem] py-4 px-6 text-ce-on-surface placeholder:text-ce-on-surface-variant/40 resize-none"
@@ -179,12 +202,13 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="rounded-full bg-ce-primary text-ce-on-primary px-12 py-6 text-base font-medium hover:opacity-90 transition-opacity flex items-center gap-3"
+                    disabled={loading}
+                    className="rounded-full bg-ce-primary text-ce-on-primary px-12 py-6 text-base font-medium hover:opacity-90 transition-opacity flex items-center gap-3 disabled:opacity-60"
                   >
-                    Send Inquiry
-                    <span className="material-symbols-outlined">
-                      arrow_forward
-                    </span>
+                    {loading ? "Sending..." : "Send Inquiry"}
+                    {!loading && (
+                      <span className="material-symbols-outlined">arrow_forward</span>
+                    )}
                   </Button>
                 </div>
               </form>

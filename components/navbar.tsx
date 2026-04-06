@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "The Estate", href: "#" },
+  { label: "Home", href: "#" },
   { label: "Services", href: "#services" },
   { label: "Our Story", href: "#about" },
   { label: "Reviews", href: "#reviews" },
@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="flex justify-between items-center px-8 md:px-12 py-6 max-w-screen-2xl mx-auto">
         {/* Wordmark */}
         <span className="font-headline text-2xl italic text-white drop-shadow-md tracking-wide">
-          Jack
+          Jack Mowing
         </span>
 
         {/* Desktop nav */}
